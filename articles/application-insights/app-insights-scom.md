@@ -1,6 +1,6 @@
 <properties 
-	pageTitle="SCOM integration with Application Insights | Microsoft Azure" 
-	description="If you're an SCOM user, monitor performance and diagnose issues with Application Insights. Comprehensive dashboards, smart alerts, powerful diagnostic tools and analysis queries." 
+	pageTitle="Integrating Application Insights with System Center Operations Manager | Microsoft Azure" 
+	description="If you're a System Center Operations Manager user, monitor performance and diagnose issues with Application Insights. Comprehensive dashboards, smart alerts, powerful diagnostic tools and analysis queries." 
 	services="application-insights" 
     documentationCenter=""
 	authors="alancameronwills" 
@@ -15,11 +15,11 @@
 	ms.date="08/12/2016" 
 	ms.author="awills"/>
  
-# Application Performance Monitoring using Application Insights for SCOM
+# Monitoring web apps using Application Insights Management Pack for System Center Operations Manager
 
 If you use System Center Operations Manager (SCOM) to manage your servers, you can monitor performance and diagnose performance issues with the help of [Visual Studio Application Insights](app-insights-asp-net.md). Application Insights monitors your web application's incoming requests, outgoing REST and SQL calls, exceptions, and log traces. It provides dashboards with metric charts and smart alerts, as well as powerful diagnostic search and analytical queries over this telemetry. 
 
-You can switch on Application Insights monitoring by using an SCOM management pack.
+You can control Application Insights monitoring of your .NET web applications by using an SCOM management pack.
 
 ## Before you start
 
@@ -39,13 +39,13 @@ On the machine where you run Operations Manager:
 2. Uninstall any old version of the management pack:
  1. In Operations Manager, open Administration, Management Packs. 
  2. Delete the old version.
-1. Download and install the management pack from the catalog.
+1. Download and install the management pack from the download center.
 2. Restart Operations Manager.
 
 
-## Create a management pack
+## Configure monitoring
 
-1. In Operations Manager, open **Authoring**, **.NET...with Application Insights**, **Add Monitoring Wizard**, and again choose **.NET...with Application Insights**.
+1. In the Operations Manager console, open **Authoring**, **.NET...with Application Insights**, **Add Monitoring Wizard**, and again choose **.NET...with Application Insights**.
 
     ![](./media/app-insights-scom/020.png)
 
@@ -56,7 +56,6 @@ On the machine where you run Operations Manager:
 3. On the same wizard page, either create a new management pack, or select a pack that you created for Application Insights earlier.
 
      (The Application Insights [management pack](https://technet.microsoft.com/library/cc974491.aspx) is a template, from which you create an instance. You can reuse the same instance later.)
-
 
     ![In the General Properties tab, type the name of the app. Click New and type a name for a management pack. Click OK, then click Next.](./media/app-insights-scom/040.png)
 
